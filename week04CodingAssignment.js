@@ -1,14 +1,19 @@
 /*
 1. Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
+
 Programmatically subtract the value of the first element in the array from the value in the last element of the array.
+
 Do not use numbers to reference the last element, find it programmatically.
 ages[7] - ages[0] is not allowed!
 Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).
+
 Use a loop to iterate through the array and calculate the average age.*/
 
 console.log("----------------------Question 1------------------------------")
 
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+let ageSum = 0;
+
 let newAge =  ages[ages.length-1] - ages[0]; //subtract first age from last age
 console.log(`Calculated age to be added to ages array is: ${newAge}`);
 
@@ -24,6 +29,16 @@ let secondNewAge = ages[ages.length-1] - ages[0]; //rinse and repeat
 console.log(`Second calculated age to be added to ages array is: ${secondNewAge}`);
 ages.push(secondNewAge);
 console.log(`Our final ages array is: ${ages}`);
+
+for (ageItem of ages)
+{
+    ageSum+= ageItem
+    //console.log(ageSum)
+}
+
+let avgAge = (Math.round(ageSum/ages.length));
+console.log(`The average age is: ${avgAge}`);
+
 
 
 /*2. Create an array called names that contains the following values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
